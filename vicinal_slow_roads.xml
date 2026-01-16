@@ -6,7 +6,8 @@
     description="Preset for mapping Belgian Slow Roads according to WikiProject Belgium / Slowroads conventions.">
 
     <item name="Vicinal Slow Roads (Belgium)"  icon="vicinal_be.svg" type="way">
-       <link href="https://wiki.openstreetmap.org/wiki/WikiProject_Belgium/Conventions/Slowroads" text="Slow Roads Wiki Page" /> 
+       <link href="https://wiki.openstreetmap.org/wiki/WikiProject_Belgium/Conventions/Slowroads" text="Slow Roads Wiki Page" />
+       <link href="https://chemins.be/" text="Chemins.be" />
 
         <!-- ========================= -->
         <!-- General Information       -->
@@ -16,22 +17,31 @@
 
         <text key="official_vicinal_ref"
               text="Official reference number"
-              length="10"/>
+              length="10"
+              short_description="Eg. : 'Voetweg 44'or 'Sentier 66 bis'"/>
         <text key="vicinal_ref"
-              text="Vicinal name"/>
+              text="Vicinal name"
+              short_description="Eg. : 'WOL_123_2', 'nnmfli12'"/>
         <combo key="vicinal_type" text="Historic Type (Atlas)" editable="false">
-            <list_entry value="path" display_value="Path" />
-            <list_entry value="road" display_value="Road" />
+            <list_entry value="path" 
+                        display_value="Path" 
+                        short_description="What was once a smal sentier (footpath) of 1 m width can now be a field track of more than 4 meters."/>
+            <list_entry value="road" 
+                        display_value="Road"
+                        short_description="What was once a field road of more than 6 meters can now be a tiny footpath of merely 1 m width." />
         </combo>
+        <text key="source"
+              text="Source"
+              short_description="Atlas des chemins vicinaux 1841, SPW - Atlas des chemins vicinaux" />
         <item_separator />
 
         <!-- ========================= -->
         <!-- Legal / Historical Status -->
         <!-- ========================= -->
-        <label text="Legal and Historical Status" />
+        <label text="Legal and Historical Status" fr.text="Statut juridique et historique" nl.text="Juridische en historische status"/>
         <space />
 
-        <combo key="designation" text="Legal Designation" editable="false">
+        <combo key="designation" text="Legal Designation" fr.text="Designation juridique" nl.text="Juridische status" editable="false">
             <!-- Values specific to Brussels Region -->
             <list_entry value="vicinal_road"
                         display_value="Vicinal Road"
@@ -54,7 +64,8 @@
                         regions="BE-WAL,BE-VLG"
                         short_description="Unified category under the Decree of Communal Roads (Wallonia and Flanders)."/>
         </combo>
-
+        <text key="source:designation"
+              text="Designation Source"/>
         <item_separator />
 
         <!-- ==================== -->
@@ -74,13 +85,15 @@
         <space />
         <combo key="disused:highway" text="Former Highway Type (if abandoned)" editable="false"
                values="path,footway,track,unclassified" />
-        <label text="(Note: If disused:highway is filled, consider adjusting or removing the main highway tag.)"/>
+        <label text="(Note: If disused:highway is filled, consider adjusting or removing the main highway tag.)" size="small"/>
         <combo key="highway" text="Highway Type (if still exists)" editable="false"
                values="path,footway,cycleway,track,unclassified,service" />
         <combo key="trail_visibility" text="Trail Visibility" editable="false"
                values="excellent,good,intermediate,bad,horrible,no" />
         <combo key="surface" text="Surface" editable="false"
                values="paved,unpaved,asphalt,gravel,ground,grass,dirt,cobblestone" />
+        <text key="source:geometry"
+              text="Geometry Source"/>
         <space />
         <!-- ========================= -->
         <!-- Accessibility             -->
@@ -92,19 +105,8 @@
                values="yes,designated,permissive,no" />
         <combo key="bicycle" text="Bicycle Access" editable="false"
                values="yes,designated,permissive,no" />
-
         <item_separator />
 
-        <!-- ========================= -->
-        <!-- Sources                   -->
-        <!-- ========================= -->
-        <label text="Sources" />
-        <text key="source"
-              text="Source" />
-        <text key="source:designation"
-              text="Designation Source"/>
-        <text key="source:geometry"
-              text="Geometry Source"/>
     </item>
 
 </presets>
