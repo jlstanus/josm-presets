@@ -1,0 +1,12 @@
+# Archives ZIP
+*.zip
+
+# Autres archives courantes (optionnel mais recommandé)
+*.zipx
+*.rar
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+*.bz2
+*.xz
