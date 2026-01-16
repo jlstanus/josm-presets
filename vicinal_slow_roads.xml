@@ -5,7 +5,7 @@
     shortdescription="Belgian Slow Roads"
     description="Preset for mapping Belgian Slow Roads according to WikiProject Belgium / Slowroads conventions.">
 
-    <item name="Slow Road (Belgium)"  icon="vicinal_be.svg" type="way">
+    <item name="Vicinal Slow Roads (Belgium)"  icon="vicinal_be.svg" type="way">
        <link href="https://wiki.openstreetmap.org/wiki/WikiProject_Belgium/Conventions/Slowroads" text="Slow Roads Wiki Page" /> 
 
         <!-- ========================= -->
@@ -57,9 +57,9 @@
 
         <item_separator />
 
-        <!-- ========================= -->
-        <!-- Names & Physical State    -->
-        <!-- ========================= -->
+        <!-- ==================== -->
+        <!-- Names & References   -->
+        <!-- ==================== -->
         <label text="Names" />
         <space />
         <text key="name" text="Name" fr.text="Nom" />
@@ -67,6 +67,9 @@
         <text key="old_name" text="Old Name" fr.text="Ancien Nom" />
         <text key="ref" text="Reference" fr.text="Référence" default="" />
         <space />
+        <!-- ================ -->
+        <!-- Physical State   -->
+        <!-- ================ -->
         <label text="Physical State" />
         <space />
         <combo key="disused:highway" text="Former Highway Type (if abandoned)" editable="false"
@@ -78,12 +81,11 @@
                values="excellent,good,intermediate,bad,horrible,no" />
         <combo key="surface" text="Surface" editable="false"
                values="paved,unpaved,asphalt,gravel,ground,grass,dirt,cobblestone" />
-
-        <item_separator />
-
+        <space />
         <!-- ========================= -->
         <!-- Accessibility             -->
         <!-- ========================= -->
+
         <label text="Accessibility" />
         <space />
         <combo key="foot" text="Foot Access" editable="false"
