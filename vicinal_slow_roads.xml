@@ -1,0 +1,107 @@
+
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0"
+    author="Jean-Louis Stanus"
+    version="0.1_2026-01-16"
+    shortdescription="Belgian Slow Roads"
+    description="Preset for mapping Belgian Slow Roads according to WikiProject Belgium / Slowroads conventions.">
+
+    <item name="Slow Road (Belgium)" type="way" icon="vicinal_be.svg">
+       <link href="https://wiki.openstreetmap.org/wiki/WikiProject_Belgium/Conventions/Slowroads" text="Trail markings" /> 
+
+        <!-- ========================= -->
+        <!-- General Information       -->
+        <!-- ========================= -->
+        <label text="General Vicinal Information" />
+        <space />
+
+        <text key="official_vicinal_ref"
+              text="Official reference number"
+              length="10"/>
+        <text key="vicinal_ref"
+              text="Vicinal name"/>
+        <combo key="vicinal_type" text="Historic Type (Atlas)" editable="false">
+            <list_entry value="path" display_value="Path" />
+            <list_entry value="road" display_value="Road" />
+        </combo>
+        <item_separator />
+
+        <!-- ========================= -->
+        <!-- Legal / Historical Status -->
+        <!-- ========================= -->
+        <label text="Legal and Historical Status" />
+        <space />
+
+        <combo key="designation" text="Legal Designation" editable="false">
+            <!-- Values specific to Brussels Region -->
+            <list_entry value="vicinal_road"
+                        display_value="Vicinal Road"
+                        regions="BE-BRU"
+                        short_description="Listed in the Atlas of Vicinal Roads or modifying acts (Brussels)."/>
+
+            <list_entry value="communal_road_ss"
+                        display_value="Communal Road (SS)"
+                        regions="BE-BRU"
+                        short_description="Municipal public-use road not appearing in the Atlas (Brussels)."/>
+
+            <list_entry value="right_of_way_ss"
+                        display_value="Right of Way (SS)"
+                        regions="BE-BRU"
+                        short_description="Public right of way not appearing in the Atlas (Brussels)."/>
+
+            <!-- Value for Wallonia & Flanders -->
+            <list_entry value="communal_road"
+                        display_value="Communal Road"
+                        regions="BE-WAL,BE-VLG"
+                        short_description="Unified category under the Decree of Communal Roads (Wallonia and Flanders)."/>
+        </combo>
+
+        <item_separator />
+
+        <!-- ========================= -->
+        <!-- Names & Physical State    -->
+        <!-- ========================= -->
+        <label text="Names" />
+        <space />
+        <label text="Names" />
+        <text key="name" text="Name" fr.text="Nom" />
+        <text key="alt_name" text="Alt. Name" fr.text="Nom alternatif" />
+        <text key="old_name" text="Old Name" fr.text="Ancien Nom" />
+        <text key="ref" text="Reference" fr.text="Référence" default="" />
+        <label text="Physical State" />
+        <combo key="disused:highway" text="Former Highway Type (if abandoned)" editable="false"
+               values="path,footway,track,unclassified" />
+        <label text="(Note: If disused:highway is filled, consider adjusting or removing the main highway tag.)"/>
+        <combo key="highway" text="Highway Type (if still exists)" editable="false"
+               values="path,footway,cycleway,track,unclassified,service" />
+        <combo key="trail_visibility" text="Trail Visibility" editable="false"
+               values="excellent,good,intermediate,bad,horrible,no" />
+        <combo key="surface" text="Surface" editable="false"
+               values="paved,unpaved,asphalt,gravel,ground,grass,dirt,cobblestone" />
+
+        <item_separator />
+
+        <!-- ========================= -->
+        <!-- Accessibility             -->
+        <!-- ========================= -->
+        <label text="Accessibility" />
+        <space />
+        <combo key="foot" text="Foot Access" editable="false"
+               values="yes,designated,permissive,no" />
+        <combo key="bicycle" text="Bicycle Access" editable="false"
+               values="yes,designated,permissive,no" />
+
+        <item_separator />
+
+        <!-- ========================= -->
+        <!-- Sources                   -->
+        <!-- ========================= -->
+        <label text="Sources" />
+        <text key="source"
+              text="Source" />
+        <text key="source:designation"
+              text="Designation Source"/>
+        <text key="source:geometry"
+              text="Geometry Source"/>
+    </item>
+
+</presets>
