@@ -5,8 +5,8 @@
     shortdescription="Belgian Slow Roads"
     description="Preset for mapping Belgian Slow Roads according to WikiProject Belgium / Slowroads conventions.">
 
-    <item name="Slow Road (Belgium)" type="way" icon="vicinal_be.svg">
-       <link href="https://wiki.openstreetmap.org/wiki/WikiProject_Belgium/Conventions/Slowroads" text="Trail markings" /> 
+    <item name="Slow Road (Belgium)"  icon="vicinal_be.svg" type="way">
+       <link href="https://wiki.openstreetmap.org/wiki/WikiProject_Belgium/Conventions/Slowroads" text="Slow Roads Wiki Page" /> 
 
         <!-- ========================= -->
         <!-- General Information       -->
@@ -62,12 +62,13 @@
         <!-- ========================= -->
         <label text="Names" />
         <space />
-        <label text="Names" />
         <text key="name" text="Name" fr.text="Nom" />
         <text key="alt_name" text="Alt. Name" fr.text="Nom alternatif" />
         <text key="old_name" text="Old Name" fr.text="Ancien Nom" />
         <text key="ref" text="Reference" fr.text="Référence" default="" />
+        <space />
         <label text="Physical State" />
+        <space />
         <combo key="disused:highway" text="Former Highway Type (if abandoned)" editable="false"
                values="path,footway,track,unclassified" />
         <label text="(Note: If disused:highway is filled, consider adjusting or removing the main highway tag.)"/>
